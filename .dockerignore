@@ -1,0 +1,15 @@
+git
+.gitignore
+node_modules
+npm-debug.log
+.nyc_output
+logs
+Dockerfile
+.dockerignore
+README.md
+build
+node_modules
+Dockerfile
+.cache
+venv/
+*.pyc

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: external-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: external-deployment
+  template:
+    metadata:
+      labels:
+        app: external-deployment
+    spec:
+      containers:
+      - name: external-deployment
+        image: cinnyabraham06/externalapp:v1
+        env:
+          - name: SERVER
+            value: 'http://34.122.171.52'
+        ports:
+        - containerPort: 8080

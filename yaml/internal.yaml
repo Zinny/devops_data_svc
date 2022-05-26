@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: internal-deployment
+  labels:
+    app: internal-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: internal-deployment
+  template:
+    metadata:
+      labels:
+        app: internal-deployment
+    spec:
+      containers:
+      - name: external
+        image: cinnyabraham06/internalapp:v1
+        ports:
+        - containerPort: 8080
+
