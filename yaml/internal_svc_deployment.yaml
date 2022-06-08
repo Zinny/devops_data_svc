@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-data-svc
+spec:
+  selector:
+    matchLabels:
+      app: data-svc-deployment
+  template:
+    metadata:
+      labels:
+        app: data-svc-deployment
+    spec:
+      containers:
+      - name: data-svc-container
+        image: cinnyabraham06/internalapp:v1
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8082
