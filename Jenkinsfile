@@ -22,7 +22,6 @@ pipeline {
                 sh 'ls -a'
             }
         }
-        node {
           stage('SCM') {
              checkout scm
           }
@@ -32,7 +31,6 @@ pipeline {
           sh "${scannerHome}/bin/sonar-scanner"
           }
         }
-       }
         stage('Building image') {
             steps{
                 script {
