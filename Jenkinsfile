@@ -25,9 +25,10 @@ pipeline {
           stage('SonarQube Analysis') {
              steps {
                  withSonarQubeEnv('sonarqube') {
-                 nodejs(nodeJSInstallationName: 'nodejs15.3.0')
+                 nodejs(nodeJSInstallationName: 'nodejs15.3.0') {
                      sh "npm run sonar"
-          }
+            }
+           }
          }
         }
         stage('Building image') {
