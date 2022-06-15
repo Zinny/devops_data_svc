@@ -19,5 +19,10 @@
     "mocha": "^9.2.1",
     "nyc": "^15.1.0",
     "supertest": "^4.0.2"
+  },
+  {
+  "scripts": {
+    "sonar": "node_modules/sonar-scanner/bin/sonar-scanner"
   }
+}
 }
