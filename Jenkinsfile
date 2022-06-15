@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+
+    tools {nodejs "nodejs"}
+
     environment {
         registryCredential = 'dockerhub'
         imageName = 'cinnyabraham06/internalapp'
