@@ -21,6 +21,6 @@
     "supertest": "^4.0.2"
   },
   "scripts": {
-    "sonar": "node_modules/sonar-scanner/bin/sonar-scanner"
+  "sonar": "sonar-scanner"
   }
 }
