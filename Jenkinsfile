@@ -25,20 +25,22 @@ pipeline {
                 sh 'ls -a'
             }
         }
-          stage('SonarQube Analysis') {
-             steps {
-                 def scannerHome = tool 'sonarqube';
-                 withSonarQubeEnv('sonarqube') {
-                     sh "npm run sonar"
-            }
-           }
+        stage('SonarQube analysis') {
+      steps {
+        script {
+          def scannerHome = tool 'sonar';
+          withSonarQubeEnv('sonarqube') {
+            sh "npm run sonar"
+          }
          }
+        }
+       }
         stage('Building image') {
             steps{
                 script {
                     echo 'build the image'
-		    dockerImage = docker.build("${env.imageName}:${env.BUILD_ID}")
-	            echo "${env.imageName}:${env.BUILD_ID}"
+                    dockerImage = docker.build("${env.imageName}:${env.BUILD_ID}")
+                    echo "${env.imageName}:${env.BUILD_ID}"
                     echo 'image built'
                 }
             }
