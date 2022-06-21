@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "nyc --temp-dir=tmp mocha --exit",
-    "sonar": "sonar-scanner"
+    "test": "nyc --temp-dir=tmp mocha --exit"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +18,6 @@
     "chai": "^4.2.0",
     "mocha": "^9.2.1",
     "nyc": "^15.1.0",
-    "sonar-scanner": "^3.1.0",
-    "sonarqube-scanner": "^2.8.1",
     "supertest": "^4.0.2"
   }
 }
