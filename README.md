@@ -7,4 +7,5 @@ This is nodejs sample microservice application,
 3. will build docker image
 4. push image to dockerhub
 5. deploy the conatiner in kubernetes cluster
+6. Test Review app deploy
 
