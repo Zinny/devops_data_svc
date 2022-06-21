@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "nyc --temp-dir=tmp mocha --exit",
-    "sonar": "sonarqube-scanner"
+    "sonar": "sonar-scanner"
   },
   "keywords": [],
   "author": "",
