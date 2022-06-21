@@ -23,6 +23,11 @@ pipeline {
                     url: 'https://github.com/Zinny/devops_data_svc.git'
                 echo 'repo files'
                 sh 'ls -a'
+                echo 'install dependencies'
+                sh 'npm install'
+                echo 'Run tests'
+                sh 'npm test'
+                echo 'Testing completed'
             }
         }
         stage('SonarQube analysis') {
