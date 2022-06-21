@@ -1,0 +1,6 @@
+projectKey=devops_data_svc
+serverUrl=http://34.105.75.10:8084
+serverVersion=9.4.0.54424
+dashboardUrl=http://34.105.75.10:8084/dashboard?id=devops_data_svc
+ceTaskId=AYGEG1Lj0FlXEK52-7Lb
+ceTaskUrl=http://34.105.75.10:8084/api/ce/task?id=AYGEG1Lj0FlXEK52-7Lb
